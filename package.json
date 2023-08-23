@@ -1,0 +1,67 @@
+{
+  "name": "project-vue",
+  "version": "1.0.0",
+  "description": "webpack搭建vue项目",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": " cross-env NODE_ENV=development node_modules/.bin/webpack serve  --config webpack.config.js",
+    "build": "cross-env NODE_ENV=production  webpack --config=webpack.config.js",
+    "lint": "npx lint-staged"
+  },
+  "author": "gmm",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "buffer": "^6.0.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "cross-env": "^7.0.3",
+    "crypto-browserify": "^3.12.0",
+    "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^3.4.1",
+    "dotenv-webpack": "^7.1.0",
+    "esbuild-loader": "^3.0.1",
+    "eslint": "^8.15.0",
+    "eslint-plugin-vue": "^8.7.1",
+    "html-webpack-plugin": "^5.5.0",
+    "husky": "^7.0.4",
+    "less-loader": "^10.2.0",
+    "lint-staged": "^12.4.1",
+    "mini-css-extract-plugin": "^2.6.0",
+    "path-browserify": "^1.0.1",
+    "postcss-loader": "^6.2.1",
+    "prettier": "^2.6.2",
+    "progress-bar-webpack-plugin": "^2.1.0",
+    "stream-browserify": "^3.0.0",
+    "vue-loader": "^15.9.8",
+    "vue-router": "^3.6.5",
+    "vue-style-loader": "^4.1.3",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0"
+  },
+  "dependencies": {
+    "element-ui": "^2.12.0",
+    "expression-eval": "^3.1.1",
+    "query-string": "^4.3.4",
+    "vue": "^2.7.14",
+    "vue-template-compiler": "^2.7.14",
+    "vue-cookies": "^1.8.3",
+    "vuex": "^3.6.2"
+  },
+  "lint-staged": {
+    "src/**/*.{js,vue}": [
+      "npx eslint --fix",
+      "git add"
+    ]
+  },
+  "browserslist": [
+    "defaults",
+    "not ie < 11",
+    "last 2 versions",
+    "> 1%",
+    "iOS 7",
+    "last 3 iOS versions"
+  ]
+}
